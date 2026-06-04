@@ -2,6 +2,9 @@
 <html lang="en" data-theme="dark">
 <head>
 <meta charset="UTF-8">
+<link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,AAABAAEAEBAAAAAAIACHAgAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAAQAAAAEAgGAAAAH/P/YQAAAk5JREFUeJylkztolFEQhb+5j/13/93NmmAkBIyCiI2FYGofnYS0EUFsbOwEbUTEIpU2gmBhYxpRhIg2QrCwUBDUQsXCCFaKICG+dZ//f+8dixhkrRQPTDdnmDnnjACoItzfa5++bgt/id3vZ6PMzycU/pr0J1QRJ6DPFg+MW58djlFbISRUVYyBiY05zsHqxz7dImEAEdGKl9SP5S2Ru8vyZHFmQpJ5NLYh21oGRQBjoF8kbt97R7sTmN03yeaJOkUZEQQR6PTLIkZmnao92mq4rR8+9wsjYpKCc8KX7wXnriwz6PfYMlljrJXR7pRYIyga67nPirI841QZDVFVBItgBah4Q8UbNo5mrKwmalVHxRuskXXFTAiqojSdQBD5LWRKysqnPkWRCEGJUen2Iiuf+pCUvOZQVUQQhWhA5beqaw3X7rxh7sRDeoNIo+E5ffEFpy48x1oBFPQXQRAzbIwQYuLY3Da2TTXodEpSUpwTThzZQavpiXHY+KEBIlCWiWpmuXx2mslNNbrdkkunp9m5fQM/2gFjhmPj1rf/FQy8N3hn2DxR5/zJXbxb6bJnepxv7ZK8ZhkUaWiD9QESk8ZGbnn+6ivnFpbJnCWrGKwVbiy9pdcLHDwwxaGZKb79KJOIqoAY0Bu9QYijI1klr3rbzNeq1fTWe2NFxLYa3o7UnW3k3tar3jZq3udVb5OyIACPr83sr+bueBnSiIA06x5NCuv3JkWM0BskBkXQijepiFxfennn6ton/gcEYHFxzs4BN/+BOP5yVfbPPwg/Ac5r/K3TO177AAAAAElFTkSuQmCC">
+<link rel="icon" type="image/png" sizes="64x64" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABTElEQVR4nO2aMQ7CMAxFDeJOzDBzAGYOxswBmGHmVDCgoJDSNqS2f5v8N0EJkf+P4yhWRQghhBBCSJuscgY9LoendSBWbI/XQY2DPy5ZeEqfET8f1iQ8JTVinQ6oWbxIV9/GO4Dd6TY65n7eO0Ty5isDal/9QKyzswVa42NAK6sfCHqZAegA0NAAdABoaAA6ADQ0AB0AGhqADgCN+m0w57Y3dQ7N26J6BlhfZbXnN9kCViZYzGtWA7SDtTK1+SJoaoDWqlnWFfMMmBq8dVF12QKlIjyao2414F8xXp1h1yKYKwrWFvdgTJyneBEegxgD+lbZe/VFgBmQikWIFwFvgSAaJV5kBjUAKV5kBgagUW2IaDRDctHKnOYzgAaED2NvU9VG0MsMiL+0kgWxTtVTAH2ml9DZArVnQaqPb4rm/HnJRtSe0YQQQgghxbwAVHhg5YUB6P8AAAAASUVORK5CYII=">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAABTElEQVR4nO2aMQ7CMAxFDeJOzDBzAGYOxswBmGHmVDCgoJDSNqS2f5v8N0EJkf+P4yhWRQghhBBCSJuscgY9LoendSBWbI/XQY2DPy5ZeEqfET8f1iQ8JTVinQ6oWbxIV9/GO4Dd6TY65n7eO0Ty5isDal/9QKyzswVa42NAK6sfCHqZAegA0NAAdABoaAA6ADQ0AB0AGhqADgCN+m0w57Y3dQ7N26J6BlhfZbXnN9kCViZYzGtWA7SDtTK1+SJoaoDWqlnWFfMMmBq8dVF12QKlIjyao2414F8xXp1h1yKYKwrWFvdgTJyneBEegxgD+lbZe/VFgBmQikWIFwFvgSAaJV5kBjUAKV5kBgagUW2IaDRDctHKnOYzgAaED2NvU9VG0MsMiL+0kgWxTtVTAH2ml9DZArVnQaqPb4rm/HnJRtSe0YQQQgghxbwAVHhg5YUB6P8AAAAASUVORK5CYII=">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YouTube Thumbnail Downloader — Download Any YouTube Thumbnail Free | Thumbnail Swiper</title>
 <meta name="description" content="Thumbnail Swiper is a free YouTube thumbnail downloader. Grab any YouTube thumbnail in HD — paste a URL and download in seconds. The fastest YouTube thumbnail grabber online.">
@@ -700,6 +703,10 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
   .about-stats { grid-template-columns:repeat(4,1fr); gap:8px; }
   .about-stat-num { font-size:20px; }
   .modal-box { padding:24px 20px; }
+  .seo-info-grid { grid-template-columns:1fr 1fr !important; }
+}
+@media(max-width:480px){
+  .seo-info-grid { grid-template-columns:1fr !important; }
 }
 /* ── Very small (≤380px) ── */
 @media(max-width:380px){
@@ -711,12 +718,14 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
   .logo-text { display:none; }
 }
 </style>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1815419603907848"
+     crossorigin="anonymous"></script>
 </head>
 <body>
 
 <!-- ═══ TOPBAR ═══ -->
 <header class="topbar">
-  <a class="logo-wrap" href="#" onclick="return false;">
+  <a class="logo-wrap" href="#" onclick="resetHome(); return false;">
     <div class="logo-icon">
       <!-- YT rectangle shape, download arrow instead of play -->
       <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
@@ -1060,59 +1069,130 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
   </div>
 
   <!-- SEO content block -->
-  <section style="padding:40px 24px 0; max-width:860px; margin:0 auto;">
+  <section style="padding:40px 24px 0; max-width:1100px; margin:0 auto;">
     <div style="border-top:1px solid var(--border); padding-top:36px;">
-      <h2 style="font-size:16px; font-weight:600; color:var(--text); margin-bottom:14px;">YouTube Thumbnail Downloader — Free &amp; Instant</h2>
-      <p style="font-size:13px; color:var(--text-ter); line-height:1.9; margin-bottom:10px;">
-        Thumbnail Swiper is the best free YouTube thumbnail downloader online. Whether you need to download a thumbnail from YouTube for research, inspiration, or to analyze competitor content — Thumbnail Swiper makes it instant. Just paste any YouTube video URL to use our YouTube thumbnail grabber and get every available resolution in one click.
-      </p>
-      <p style="font-size:13px; color:var(--text-ter); line-height:1.9; margin-bottom:10px;">
-        Looking for a fast YT thumbnail downloader? Thumbnail Swiper supports all YouTube URL formats including standard watch links, youtu.be short links, YouTube Shorts, and embedded video URLs. Our thumbnail grabber checks every resolution automatically so you always get the highest quality available.
-      </p>
-      <p style="font-size:13px; color:var(--text-ter); line-height:1.9;">
-        Need to get a YouTube thumbnail for your own video or a competitor's? Thumbnail Swiper is the only free YouTube video thumbnail download tool that also lets you preview how your thumbnail looks on the real YouTube home feed, split-test two versions side by side, and generate AI prompts to recreate any thumbnail — all in one place.
-      </p>
+      <h2 style="font-size:18px; font-weight:700; color:var(--text); margin-bottom:24px; text-align:center;">YouTube Thumbnail Downloader — Free &amp; Instant</h2>
+      <div class="seo-info-grid" style="display:grid; grid-template-columns:repeat(4,1fr); gap:16px;">
+
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:22px 18px;">
+          <div style="font-size:26px; margin-bottom:10px;">⚡</div>
+          <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:8px;">Instant Thumbnail Grabber</div>
+          <p style="font-size:12px; color:var(--text-ter); line-height:1.8;">Thumbnail Swiper is the fastest free YouTube thumbnail downloader online. Paste any YouTube URL and grab every available resolution in one click — no login, no wait.</p>
+        </div>
+
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:22px 18px;">
+          <div style="font-size:26px; margin-bottom:10px;">🔗</div>
+          <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:8px;">All URL Formats Supported</div>
+          <p style="font-size:12px; color:var(--text-ter); line-height:1.8;">Our YT thumbnail downloader supports every YouTube URL format — standard watch links, youtu.be short links, YouTube Shorts, and embedded video URLs. It just works.</p>
+        </div>
+
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:22px 18px;">
+          <div style="font-size:26px; margin-bottom:10px;">📐</div>
+          <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:8px;">Every Resolution Available</div>
+          <p style="font-size:12px; color:var(--text-ter); line-height:1.8;">Download any YouTube video thumbnail in Max HD (1280×720), Standard, High Quality, or Medium. Our thumbnail grabber checks every size automatically so you always get the best quality.</p>
+        </div>
+
+        <div style="background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:22px 18px;">
+          <div style="font-size:26px; margin-bottom:10px;">🎯</div>
+          <div style="font-size:13px; font-weight:600; color:var(--text); margin-bottom:8px;">More Than a Downloader</div>
+          <p style="font-size:12px; color:var(--text-ter); line-height:1.8;">Get a YouTube thumbnail, preview it on a real YouTube feed mockup, split-test two versions, and recreate competitor thumbnails with AI — all free, all in one place.</p>
+        </div>
+
+      </div>
     </div>
   </section>
   <div class="divider" style="margin-top:36px;"></div>
 
   <footer>
-    <div>© 2025 <em>Thumbnail Swiper</em> · For personal &amp; research use only</div>
+    <div>© 2026 <em>Thumbnail Swiper</em> · For personal &amp; research use only</div>
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; justify-content:center;">
       <span>Not affiliated with YouTube or Google</span>
+      <a class="footer-link" onclick="openAbout()">About Us</a>
+      <span style="color:var(--border);">·</span>
+      <a class="footer-link" onclick="openContact()">Contact</a>
+      <span style="color:var(--border);">·</span>
       <a class="footer-link" onclick="openPrivacy()">Privacy Policy</a>
       <span style="color:var(--border);">·</span>
       <a class="footer-link" onclick="openTerms()">Terms &amp; Conditions</a>
     </div>
   </footer>
 
+  <!-- ═══ CONTACT MODAL ═══ -->
+  <div class="modal-overlay" id="contactModal" onclick="closeContactOutside(event)">
+    <div class="modal-box" id="contactBox" style="max-width:480px; text-align:center;">
+      <button class="modal-close" onclick="closeContact()">×</button>
+      <h2>Contact Us</h2>
+      <p class="modal-date">We'd love to hear from you</p>
+      <p style="font-size:14px; color:var(--text-sec); line-height:1.8; margin-bottom:28px;">Have a question, suggestion, or found a bug? Send us an email and we'll get back to you as soon as possible.</p>
+      <div style="background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:16px 20px; display:inline-flex; align-items:center; gap:14px; margin-bottom:8px;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <span style="font-size:14px; color:var(--text); font-weight:500; user-select:all;">jaythecreator.info@gmail.com</span>
+        <button onclick="copyEmail()" id="copyEmailBtn" style="background:var(--gold); border:none; border-radius:6px; padding:6px 14px; font-size:12px; font-weight:600; font-family:'Roboto',sans-serif; cursor:pointer; color:#0f0f0f; transition:background 0.15s;">Copy</button>
+      </div>
+      <p style="font-size:12px; color:var(--text-ter); margin-top:4px;">Click Copy or highlight to select</p>
+    </div>
+  </div>
+
+  <!-- ═══ ABOUT US MODAL ═══ -->
+  <div class="modal-overlay" id="aboutModal" onclick="closeAboutOutside(event)">
+    <div class="modal-box" id="aboutBox">
+      <button class="modal-close" onclick="closeAbout()">×</button>
+      <h2>About Us</h2>
+      <p class="modal-date">Thumbnail Swiper — Built for YouTube Creators</p>
+
+      <div class="modal-highlight">
+        Thumbnail Swiper is a free, no-login toolkit built for YouTube creators who take their thumbnails seriously. Everything runs in your browser — fast, private, and always free.
+      </div>
+
+      <h3>What We Built</h3>
+      <p>We noticed that the tools creators actually needed — downloading thumbnails, previewing how they look on YouTube, split-testing ideas, and reverse-engineering competitor designs — were either paywalled, or just didn't exist. So we built them all in one clean, fast, free tool.</p>
+
+      <h3>What You Can Do Here</h3>
+      <ul>
+        <li><strong style="color:var(--text);">Download any YouTube thumbnail</strong> — in every available resolution, instantly</li>
+        <li><strong style="color:var(--text);">Preview your thumbnail</strong> on a realistic YouTube home feed mockup</li>
+        <li><strong style="color:var(--text);">Split test two thumbnails</strong> side by side before you publish</li>
+        <li><strong style="color:var(--text);">Recreate a competitor's thumbnail</strong> using an AI prompt you can paste into any image generator</li>
+      </ul>
+
+      <h3>Our Philosophy</h3>
+      <p>No account required. No watermarks. No limits on downloads. We believe creator tools should be accessible to everyone — whether you have 100 subscribers or 10 million.</p>
+
+      <h3>Privacy First</h3>
+      <p>We may collect limited data to improve your experience. We are committed to handling any such data responsibly and will always be transparent about what we collect and why. See our Privacy Policy for full details.</p>
+
+      <h3>Contact</h3>
+      <p>Have a suggestion, found a bug, or want to collaborate? Use the <strong style="color:var(--text);">Contact</strong> link in the footer. We read everything.</p>
+    </div>
+  </div>
+
   <!-- ═══ PRIVACY POLICY MODAL ═══ -->
   <div class="modal-overlay" id="privacyModal" onclick="closePrivacyOutside(event)">
     <div class="modal-box" id="privacyBox">
       <button class="modal-close" onclick="closePrivacy()">×</button>
       <h2>Privacy Policy</h2>
-      <p class="modal-date">Effective date: June 2025</p>
+      <p class="modal-date">Effective date: June 2026</p>
 
       <div class="modal-highlight">
-        <strong>The short version:</strong> Thumbnail Swiper does not collect, store, or share any personal information. Everything happens in your browser. We don't know who you are, and we don't want to.
+        <strong>The short version:</strong> Thumbnail Swiper does not directly collect personal information through the tool. Third-party services like Google AdSense may use cookies for ad personalization. See Section 4 for details on how to opt out.
       </div>
 
       <h3>1. Who We Are</h3>
       <p>Thumbnail Swiper is a free online tool that allows users to download YouTube video thumbnails and access related creator utilities. This policy explains our approach to your privacy.</p>
 
-      <h3>2. Information We Do Not Collect</h3>
-      <p>We do not collect, store, process, or transmit:</p>
+      <h3>2. Information We Currently Collect</h3>
+      <p>As of the effective date of this policy, Thumbnail Swiper does not directly collect personal information through the tool itself. However, third-party services we use (such as Google AdSense) may collect certain data automatically. We do not currently collect or store:</p>
       <ul>
         <li>Your name, email address, or any personal identifiers</li>
         <li>YouTube URLs you paste into the tool</li>
         <li>Images you upload for the preview or split-test features</li>
-        <li>Your IP address or location data</li>
-        <li>Cookies or tracking identifiers</li>
-        <li>Browser fingerprints or device information</li>
+        <li>Your IP address or location data directly</li>
+        <li>Browser fingerprints or device information directly</li>
       </ul>
+      <p>This may change in the future. If we begin collecting additional data, this policy will be updated accordingly.</p>
 
       <h3>3. How the Tool Works</h3>
-      <p>All functionality — thumbnail fetching, image preview, split testing, and prompt copying — runs entirely in your browser. When you paste a YouTube URL, your browser retrieves the thumbnail directly from YouTube's public servers (<em>i.ytimg.com</em>). No data passes through our servers.</p>
+      <p>Core functionality — thumbnail fetching, image preview, split testing, and prompt copying — is designed to run in your browser. When you paste a YouTube URL, your browser retrieves the thumbnail directly from YouTube's public servers (<em>i.ytimg.com</em>). We do not intentionally store or log the content of your searches. Third-party services embedded in the site (such as advertising networks) may operate independently and are subject to their own privacy policies.</p>
 
       <h3>4. Third-Party Services &amp; Advertising</h3>
       <p>Thumbnail images are fetched from YouTube's public CDN (<em>ytimg.com</em>), which is operated by Google. Your use of YouTube content is subject to <a href="https://policies.google.com/privacy" target="_blank" style="color:var(--gold);">Google's Privacy Policy</a>. We have no control over and no visibility into those requests.</p>
@@ -1127,7 +1207,7 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
       <p>If this policy changes materially, we will update the effective date above. Continued use of Thumbnail Swiper after any changes constitutes acceptance of the updated policy.</p>
 
       <h3>7. Contact</h3>
-      <p>Questions about this privacy policy? Since we collect no user data, there is no account system or data request process. For general inquiries, you can reach us via the contact method listed on this site.</p>
+      <p>Questions about this privacy policy? Since we collect no user data, there is no account system or data request process. For general inquiries, use the <strong style="color:var(--text);">Contact</strong> link in the footer of this site.</p>
     </div>
   </div>
 
@@ -1136,7 +1216,7 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
     <div class="modal-box" id="termsBox">
       <button class="modal-close" onclick="closeTerms()">×</button>
       <h2>Terms &amp; Conditions</h2>
-      <p class="modal-date">Effective date: June 2025</p>
+      <p class="modal-date">Effective date: June 2026</p>
 
       <div class="modal-highlight">
         <strong>The short version:</strong> Thumbnail Swiper is a free tool for personal and research use. Use it responsibly. We provide it as-is with no guarantees. Don't use it to infringe copyright or violate YouTube's terms.
@@ -1192,7 +1272,7 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
       <p>These Terms shall be governed by and construed in accordance with applicable law. Any disputes arising from your use of Thumbnail Swiper shall be resolved through good-faith negotiation before pursuing any formal legal remedy.</p>
 
       <h3>11. Contact</h3>
-      <p>For questions regarding these Terms and Conditions, please use the contact method listed on this site.</p>
+      <p>For questions regarding these Terms and Conditions, please use the <strong style="color:var(--text);">Contact</strong> link in the footer of this site.</p>
     </div>
   </div>
 </main>
@@ -1203,6 +1283,18 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
 </div>
 
 <script>
+/* ─── RESET HOME ─── */
+function resetHome(){
+  // Clear input
+  document.getElementById('urlInput').value='';
+  document.getElementById('errorMsg').classList.remove('show');
+  // Hide results, show placeholder
+  document.getElementById('resultsSection').classList.remove('show');
+  document.getElementById('placeholderSection').style.display='';
+  // Scroll to top
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
 /* ─── PRIVACY MODAL ─── */
 function openPrivacy(){
   document.getElementById('privacyModal').classList.add('open');
@@ -1216,8 +1308,40 @@ function closePrivacyOutside(e){
   if(e.target===document.getElementById('privacyModal')) closePrivacy();
 }
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){ closePrivacy(); closeTerms(); }
+  if(e.key==='Escape'){ closePrivacy(); closeTerms(); closeAbout(); closeContact(); }
 });
+
+function copyEmail(){
+  const email = 'jaythecreator.info@gmail.com';
+  const btn = document.getElementById('copyEmailBtn');
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(email).then(()=>{ btn.textContent='Copied!'; setTimeout(()=>btn.textContent='Copy', 2000); }).catch(()=>fallbackCopy(email));
+  } else { fallbackCopy(email); btn.textContent='Copied!'; setTimeout(()=>btn.textContent='Copy', 2000); }
+}
+
+function openContact(){
+  document.getElementById('contactModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeContact(){
+  document.getElementById('contactModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeContactOutside(e){
+  if(e.target===document.getElementById('contactModal')) closeContact();
+}
+
+function openAbout(){
+  document.getElementById('aboutModal').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeAbout(){
+  document.getElementById('aboutModal').classList.remove('open');
+  document.body.style.overflow='';
+}
+function closeAboutOutside(e){
+  if(e.target===document.getElementById('aboutModal')) closeAbout();
+}
 
 function openTerms(){
   document.getElementById('termsModal').classList.add('open');
