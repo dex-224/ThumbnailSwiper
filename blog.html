@@ -52,7 +52,45 @@ footer a{color:var(--gold);margin:0 8px;}
 .logo-wrap { display:flex; align-items:center; gap:6px; text-decoration:none; flex-shrink:0; margin-right:8px; }
 .logo-icon { background:var(--gold); border-radius:5px; width:32px; height:22px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
 .logo-text { font-size:20px; font-weight:700; color:var(--text); letter-spacing:-0.3px; white-space:nowrap; }
-</style>
+[data-theme="dark"] {
+  --bg: #0f0f0f;
+  --bg2: #181818;
+  --surface: #212121;
+  --surface2: #272727;
+  --surface3: #3d3d3d;
+  --border: #3f3f3f;
+  --text: #f1f1f1;
+  --text-sec: #aaaaaa;
+  --text-ter: #717171;
+  --hero-bg: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.08) 0%, transparent 70%);
+  --section-bg: #141414;
+  --input-bg: #212121;
+  --card-bg: #212121;
+  --yt-mockup-bg: #0f0f0f;
+}
+[data-theme="light"] {
+  --bg: #ffffff;
+  --bg2: #f9f9f9;
+  --surface: #f2f2f2;
+  --surface2: #e8e8e8;
+  --surface3: #d0d0d0;
+  --border: #dddddd;
+  --text: #0f0f0f;
+  --text-sec: #606060;
+  --text-ter: #909090;
+  --hero-bg: radial-gradient(ellipse 80% 50% at 50% 0%, rgba(201,168,76,0.1) 0%, transparent 70%);
+  --section-bg: #f9f9f9;
+  --input-bg: #f2f2f2;
+  --card-bg: #ffffff;
+  --yt-mockup-bg: #ffffff;
+}
+.theme-btn {
+  background:none; border:1px solid var(--border); border-radius:20px;
+  padding:6px 12px; cursor:pointer; color:var(--text-sec);
+  font-size:12px; font-family:'Roboto',sans-serif; display:flex; align-items:center;
+  gap:6px; transition:border-color 0.2s, background 0.2s; white-space:nowrap; flex-shrink:0;
+}
+@media(max-width:600px){.logo-icon{width:26px;height:18px;}.logo-text{font-size:15px;}}@media(max-width:380px){.logo-text{display:none;}}</style>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1815419603907848"
      crossorigin="anonymous"></script>
 </head>
@@ -75,6 +113,10 @@ footer a{color:var(--gold);margin:0 8px;}
     <a href="index.html">Home</a>
     <a href="blog.html" style="color:var(--gold);">Blog</a>
   </nav>
+  <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+    <span>Light mode</span>
+  </button>
 </header>
 
 <div class="blog-hero">
@@ -312,5 +354,21 @@ footer a{color:var(--gold);margin:0 8px;}
   <a href="index.html">Home</a>
   <a href="blog.html">Blog</a>
 </footer>
+<script>
+function toggleTheme(){
+  const html = document.documentElement;
+  const isDark = html.getAttribute('data-theme')==='dark';
+  html.setAttribute('data-theme', isDark?'light':'dark');
+  const btn = document.getElementById('themeBtn');
+  const icon = document.getElementById('themeIcon');
+  if(isDark){
+    btn.querySelector('span').textContent='Dark mode';
+    icon.innerHTML='<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+  } else {
+    btn.querySelector('span').textContent='Light mode';
+    icon.innerHTML='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
+  }
+}
+</script>
 </body>
 </html>
