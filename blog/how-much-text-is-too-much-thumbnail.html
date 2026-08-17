@@ -10,8 +10,7 @@ a{color:var(--gold);text-decoration:none;}a:hover{color:var(--gold-light);}
 .logo-text{font-size:20px;font-weight:700;color:var(--text);letter-spacing:-0.3px;white-space:nowrap;}
 .logo-text span{color:#C9A84C;}
 .topbar-nav{display:flex;gap:24px;margin-left:auto;font-size:14px;}
-.topbar-nav a{color:var(--text-sec);}
-.topbar-nav a:hover{color:#C9A84C;}
+.topbar-nav a{color:var(--text-sec);padding:6px 12px;border-radius:8px;transition:color 0.2s,background 0.2s;}.topbar-nav a:hover{color:#C9A84C;background:var(--surface2);}
 .article-wrap{max-width:760px;margin:0 auto;padding:48px 24px 80px;}
 .breadcrumb{font-size:13px;color:var(--text-ter);margin-bottom:28px;}
 .breadcrumb a{color:var(--text-ter);}
@@ -104,7 +103,7 @@ footer a{color:#C9A84C;margin:0 8px;}
 .share-item svg{flex-shrink:0;width:18px;height:18px;}
 .share-bottom-wrap{display:flex;justify-content:center;margin:44px 0 8px;padding-top:32px;border-top:1px solid var(--border);}
 @media(max-width:600px){.share-menu{left:auto;right:0;}}
-@media(max-width:600px){.logo-icon{width:26px;height:18px;}.logo-text{font-size:15px;}}@media(max-width:380px){.logo-text{display:none;}}</style></head><body>
+@media(max-width:600px){.logo-icon{width:26px;height:18px;}.logo-text{font-size:15px;}}@media(max-width:380px){.logo-text{display:none;}}.logo-wrap:hover,.logo-wrap:hover .logo-text{color:var(--text);}</style></head><body>
 <header class="topbar"><a class="logo-wrap" href="../index.html"><div class="logo-icon"><svg width="20" height="14" viewBox="0 0 20 14" fill="none"><line x1="10" y1="2" x2="10" y2="9" stroke="#0f0f0f" stroke-width="2" stroke-linecap="round"/><polyline points="6.5,7 10,10.5 13.5,7" stroke="#0f0f0f" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/><line x1="5" y1="12.5" x2="15" y2="12.5" stroke="#0f0f0f" stroke-width="2" stroke-linecap="round"/></svg></div><span class="logo-text">Thumbnail<span>Swiper</span></span></a><nav class="topbar-nav"><a href="../index.html">Home</a><a href="../blog.html">Blog</a></nav>
   <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
