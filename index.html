@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
+<script>(function(){try{var t=localStorage.getItem('tsTheme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+
 <meta charset="UTF-8">
 <link rel="icon" type="image/x-icon" href="images/favicon.ico">
 <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
@@ -632,18 +634,19 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
 
 /* ── Mobile (≤600px) ── */
 @media(max-width:600px){
-  /* topbar */
-  .topbar { padding:0 12px; gap:8px; height:52px; }
+  /* topbar: two-row layout on mobile — logo/nav row, then full-width search */
+  .topbar { flex-wrap:wrap; height:auto; padding:10px 12px 12px; gap:8px 10px; }
+  .logo-wrap { order:1; }
+  .topbar-blog-link { order:2; margin-left:auto; }
+  .theme-btn { order:3; padding:5px 8px; font-size:11px; }
+  .theme-btn span { display:none; }
+  .search-wrap { order:4; flex-basis:100%; max-width:100%; margin-top:2px; }
   .logo-text { font-size:15px; }
   .logo-icon { width:26px; height:18px; }
-  .search-wrap { max-width:100%; }
-  .search-input-box { padding:0 10px; gap:6px; border-radius:30px 0 0 30px; }
-  #urlInput { font-size:13px; }
-  .search-btn { padding:0 12px; font-size:12px; gap:5px; border-radius:0 30px 30px 0; }
-  .search-btn .btn-label { display:none; }
+  .search-input-box { padding:0 12px; gap:8px; border-radius:30px 0 0 30px; }
+  #urlInput { font-size:14px; }
+  .search-btn { padding:0 16px; font-size:13px; gap:6px; border-radius:0 30px 30px 0; }
   .btn-icon { display:block; }
-  .theme-btn { padding:5px 8px; font-size:11px; }
-  .theme-btn span { display:none; }
 
   /* hero */
   .hero { padding:28px 16px 24px; }
@@ -790,7 +793,7 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
     </button>
   </div>
 
-  <a href="blog.html" style="font-family:'Roboto',sans-serif; font-size:14px; font-weight:500; color:var(--text-sec); text-decoration:none; white-space:nowrap; padding:6px 12px; border-radius:8px; transition:color 0.2s, background 0.2s;" onmouseover="this.style.color='var(--gold)';this.style.background='var(--surface2)';" onmouseout="this.style.color='var(--text-sec)';this.style.background='transparent';">Blog</a>
+  <a href="blog.html" class="topbar-blog-link" style="font-family:'Roboto',sans-serif; font-size:14px; font-weight:500; color:var(--text-sec); text-decoration:none; white-space:nowrap; padding:6px 12px; border-radius:8px; transition:color 0.2s, background 0.2s;" onmouseover="this.style.color='var(--gold)';this.style.background='var(--surface2)';" onmouseout="this.style.color='var(--text-sec)';this.style.background='transparent';">Blog</a>
   <button class="theme-btn" onclick="toggleTheme()" id="themeBtn">
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" id="themeIcon"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
     <span>Light mode</span>
@@ -1259,6 +1262,8 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
     <div style="display:flex; gap:16px; align-items:center; flex-wrap:wrap; justify-content:center;">
       <span>Not affiliated with YouTube or Google</span>
       <span style="color:var(--border);">·</span>
+      <a class="footer-link" href="#" onclick="resetHome(); return false;">Home</a>
+      <span style="color:var(--border);">·</span>
       <a class="footer-link" onclick="openAbout()">About Us</a>
       <span style="color:var(--border);">·</span>
       <a class="footer-link" onclick="openContact()">Contact</a>
@@ -1513,7 +1518,9 @@ function closeTermsOutside(e){
 function toggleTheme(){
   const html = document.documentElement;
   const isDark = html.getAttribute('data-theme')==='dark';
-  html.setAttribute('data-theme', isDark?'light':'dark');
+  var newTheme = isDark?'light':'dark';
+  html.setAttribute('data-theme', newTheme);
+  try{localStorage.setItem('tsTheme', newTheme);}catch(e){}
   const btn = document.getElementById('themeBtn');
   const icon = document.getElementById('themeIcon');
   if(isDark){
@@ -1524,6 +1531,16 @@ function toggleTheme(){
     icon.innerHTML='<circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>';
   }
 }
+(function(){
+  var current = document.documentElement.getAttribute('data-theme');
+  var btn = document.getElementById('themeBtn');
+  var icon = document.getElementById('themeIcon');
+  if(btn && icon && current === 'light'){
+    btn.querySelector('span').textContent = 'Dark mode';
+    icon.innerHTML = '<path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>';
+  }
+})();
+
 
 /* ─── DOWNLOAD CORE ─── */
 const RESOLUTIONS=[
