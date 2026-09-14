@@ -245,6 +245,9 @@ main { flex:1; overflow-y:auto; }
 .placeholder-thumb { aspect-ratio:16/9; background:var(--surface2); border-radius:10px; overflow:hidden; position:relative; }
 [data-theme="dark"] .placeholder-thumb { border:1px solid rgba(255,255,255,0.18); }
 [data-theme="light"] .placeholder-thumb { border:1px solid rgba(0,0,0,0.2); }
+.product-ad-banner { display:block; border-radius:12px; overflow:hidden; transition:opacity 0.2s, transform 0.2s; }
+[data-theme="dark"] .product-ad-banner { border:1px solid rgba(255,255,255,0.18); }
+[data-theme="light"] .product-ad-banner { border:1px solid rgba(0,0,0,0.2); }
 .placeholder-thumb::after { content:''; position:absolute; inset:0; background:linear-gradient(90deg,transparent,rgba(255,255,255,0.06),transparent); animation:shimmer 1.6s infinite; }
 @keyframes shimmer { from{transform:translateX(-100%)} to{transform:translateX(100%)} }
 .placeholder-meta { display:flex; gap:10px; padding:10px 4px; }
@@ -852,7 +855,7 @@ footer em { color:var(--gold); font-style:normal; font-weight:500; }
 
   <!-- ═══ PRODUCT AD BANNER ═══ -->
   <div class="section" style="padding-top:40px; padding-bottom:0; max-width:1100px;">
-    <a href="https://beacons.ai/thumbnailswiper" target="_blank" rel="noopener noreferrer" style="display:block; border-radius:12px; overflow:hidden; transition:opacity 0.2s, transform 0.2s;" onmouseover="this.style.opacity='0.92';this.style.transform='scale(1.005)';" onmouseout="this.style.opacity='1';this.style.transform='scale(1)';">
+    <a href="https://beacons.ai/thumbnailswiper" target="_blank" rel="noopener noreferrer" class="product-ad-banner" onmouseover="this.style.opacity='0.92';this.style.transform='scale(1.005)';" onmouseout="this.style.opacity='1';this.style.transform='scale(1)';">
       <img src="images/product-ad-banner.jpg" alt="Thumbnail Swiper digital products, 200 Faceless YouTube Niches and the Creator Growth Playbook" style="width:100%; height:auto; display:block;">
     </a>
     <div class="divider"></div>
